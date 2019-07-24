@@ -1,10 +1,11 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="login page">
-    <meta name="authorJ" content="Abdullah Alsqoor">
+    <meta name="authorJ" content="abdullah alsqoor">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
@@ -19,7 +20,58 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+        <style>
+            button {
+                height: 60px;
+                width: 180px;
+                font-size: 1.3rem !important;
+                font-weight: bold !important;
+            }
+
+            body {
+                background-image: url('https://images.pexels.com/photos/2663247/pexels-photo-2663247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+
+            .jumbotron-transparent {
+                background-color: rgba(0, 0, 0, 0)
+            }
+        </style>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-5" style="height: 90px">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mr-auto">
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-danger m-2" type="submit">Login</button>
+                <button class="btn btn-danger m-2" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-transparent">
+        <div class="container">
+            <h1 class="display-4">Website Name</h1>
+            <p class="lead">Welcome to our website, here you can add notes and boost your life.</p>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small blue fixed-bottom bg-dark light">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
+
 </html>
