@@ -4,15 +4,13 @@ body {
     background-size: 100%;
 }
 
-button {
-    height: 50px;
-    width: 150px;
+nav button {
+    height: 40px;
+    width: 120px;
     font-size: 1.2rem !important;
-    /* font-weight:  !important; */
 }
 
-
 .jumbotron-transparent {
-    background-color: rgba(0, 0, 0, 0);
     font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0);
 }
