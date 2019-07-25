@@ -20,7 +20,7 @@ body {
     box-shadow: 10px 10px 5px rgb(136,136,136, .2); 
 }
 
-div h1 {
+div h2 {
     background-color: rgba(52, 58, 64, .7);
     padding: 30px;
 }
@@ -33,4 +33,27 @@ div form a {
 
 i {
     color: rgb(29, 22, 22, .8);
+}
+
+.or-seperator {
+    margin: 50px 0 15px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.or-seperator b {
+    padding: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    color: red;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
 }
