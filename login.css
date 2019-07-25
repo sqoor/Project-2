@@ -57,3 +57,11 @@ i {
     top: -22px;
     z-index: 1;
 }
+
+.toast {
+    position: relative;
+    /* left:; */
+    top: -2200px;
+    z-index: 2;
+    border-radius: 30px;
+}
