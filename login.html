@@ -25,35 +25,36 @@
 
     <!-- fontawesome icons -->
     <script src="https://kit.fontawesome.com/6aa632ba37.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="validation.js"></script>
 </head>
 
 <body>
     <div>
         <div class="wrapper p-5">
             <h2 class="mb-5 rounded-pill">Login Page</h2>
-
             <div class="social-btn text-center">
                 <a href="#" class="btn btn-primary btn-lg rounded-pill"><i class="fab fa-facebook-f"></i> Facebook</a>
                 <a href="#" class="btn btn-info btn-lg rounded-pill"><i class="fab fa-twitter"></i> Twitter</a>
                 <a href="#" class="btn btn-danger btn-lg rounded-pill"><i class="fab fa-google"></i> Google</a>
             </div>
-
             <div class="or-seperator">
                 <b>or</b>
             </div>
-
             <form>
                 <div class="form-group">
                     <label for="username"><i class="fas fa-user"></i> Username</label>
-                    <input type="email" class="form-control rounded-pill" id="username"
+                    <input id="username" type="email" class="form-control rounded-pill" id="username"
                         placeholder="Enter username or email">
                 </div>
                 <div class="form-group">
                     <label for="password"> <i class="fas fa-lock"></i> Password</label>
-                    <input type="password" class="form-control rounded-pill" id="password" placeholder="Password">
+                    <input id="password" type="password" class="form-control rounded-pill" id="password" placeholder="Password">
                     <a href="#" id="passwordHelp" class="form-text text-danger">Forgot password?</a>
                 </div>
-                <button type="submit" class="btn btn-danger rounded-pill mt-4 w-100">Login</button>
+                <button id="submitBtn" submit" class="btn btn-danger rounded-pill mt-4 w-100">Login</button>
             </form>
         </div>
     </div>
