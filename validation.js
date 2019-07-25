@@ -33,7 +33,7 @@ $(document).ready(function() {
         }
         else  {
             console.log('not valid');
-            // $('.toast').toast('show');
+            $('.toast').toast('show');
         }
     });
 

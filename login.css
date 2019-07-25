@@ -61,7 +61,9 @@ i {
 .toast {
     position: relative;
     /* left:; */
-    top: -2200px;
+    top: -220px;
     z-index: 2;
     border-radius: 30px;
+    background-color:red;
+    width: 200%
 }
