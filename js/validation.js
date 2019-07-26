@@ -12,6 +12,12 @@ $(document).ready(function() {
     var password = $('#password');
     var submitBtn = $('#submitBtn');
     var errorMessage = $('#error-message');
+
+    function saveUserData(user) {
+        for(var property in user) {
+            localStorage.setItem(property, user[property]);
+        }
+    }
    
     function setError(message) {
         errorMessage.html('<strong>Ops!</strong> ' + message);
@@ -49,20 +55,16 @@ $(document).ready(function() {
     function checkUser(field1, field2) {
         var isUser = false;
         users.forEach(function(user) {
-            // console.log('username', user.name);
             if(field1 === user.name && field2 === user.password) {
-                console.log('Welcome ' + field1);
+                saveUserData(user);
                 isUser = true;
             }
         }); 
         
         if(isUser) {
-            // setError('Welcome ' + field1);
-            // redirec to the users's page, to-do-list app
-            // window.location.replace('userpage.html');
-            var queryString = '?name=' + field1;
+            var queryString = '?user=' + field1;
             window.location.href = 'userpage.html' + queryString;
-            window.location.replace('userpage.html' + queryString);
+            // window.location.replace('userpage.html' + queryString);
         } else {
             setError('Username and password you have entered do not match, try again.');
         }
@@ -72,15 +74,9 @@ $(document).ready(function() {
         e.preventDefault();
 
         if(isValid(username.val(), password.val())) {
-            console.log('valid')
-            console.log('username:', username.val())
-            console.log('password:', password.val())
-
             checkUser(username.val(), password.val());
         }
         else  {
-            console.log('not valid, empty field(s)');
-
             setError('You should enter the empty fields.');
         }
     });
@@ -105,5 +101,3 @@ $(document).ready(function() {
 
 //     console.log(_users);
 // });
-
-
