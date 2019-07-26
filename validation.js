@@ -57,8 +57,12 @@ $(document).ready(function() {
         }); 
         
         if(isUser) {
-            setError('Welcome ' + field1);
+            // setError('Welcome ' + field1);
             // redirec to the users's page, to-do-list app
+            // window.location.replace('userpage.html');
+            var queryString = '?name=' + field1;
+            window.location.href = 'userpage.html' + queryString;
+            window.location.replace('userpage.html' + queryString);
         } else {
             setError('Username and password you have entered do not match, try again.');
         }
@@ -81,3 +85,25 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+
+
+
+// get data from JSON file
+// $(document).ready(function() {
+//     console.log('read from json file');
+//     var _users = [];
+//     $.getJSON('data.json', function(data) {
+//         _users = data;
+//         console.log(data)
+//         data.forEach(function(element) {
+//             _users.push(element);
+//         });
+//     });
+
+//     console.log(_users);
+// });
+
+
