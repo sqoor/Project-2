@@ -58,12 +58,20 @@ i {
     z-index: 1;
 }
 
+
+/* 
 .toast {
     position: relative;
-    /* left:; */
     top: -220px;
     z-index: 2;
     border-radius: 30px;
     background-color:red;
     width: 200%
+} 
+*/
+
+
+.alert {
+    width: 26rem;
+    /* display: none */
 }
