@@ -1,9 +1,9 @@
 var users = [ 
-    { name: 'Abdullah', password: '1234' },
-    { name: 'Mohammed', password: '1234' },
-    { name: 'Rachid', password: '1234' },
-    { name: 'Ali', password: '1234' },
-    { name: 'Elie', password: '1234' },
+    { username: 'Abdullah', password: '1234' },
+    { username: 'Mohammed', password: '1234' },
+    { username: 'Rachid', password: '1234' },
+    { username: 'Ali', password: '1234' },
+    { username: 'Elie', password: '1234' },
 ];
 
 
@@ -33,19 +33,19 @@ $(document).ready(function() {
         var field2Valid;
 
         if(field1 === '') {
-            username.css('border', '3px red solid');
+            username.addClass('emptyField');
             field1Valid =  false;
         } else {
-            username.css('border', '');
+            username.removeClass('emptyField');
             field1Valid = true;
         }
   
 
         if(field2 === '') {
-            password.css('border', '3px red solid');
+            password.addClass('emptyField');
             field2Valid = false;
         } else {
-            password.css('border', '');
+            password.removeClass('emptyField');
             field2Valid = true;
         }
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
     function checkUser(field1, field2) {
         var isUser = false;
         users.forEach(function(user) {
-            if(field1 === user.name && field2 === user.password) {
+            if(field1 === user.username && field2 === user.password) {
                 saveUserData(user);
                 isUser = true;
             }
@@ -81,23 +81,3 @@ $(document).ready(function() {
         }
     });
 });
-
-
-
-
-
-
-// get data from JSON file
-// $(document).ready(function() {
-//     console.log('read from json file');
-//     var _users = [];
-//     $.getJSON('data.json', function(data) {
-//         _users = data;
-//         console.log(data)
-//         data.forEach(function(element) {
-//             _users.push(element);
-//         });
-//     });
-
-//     console.log(_users);
-// });

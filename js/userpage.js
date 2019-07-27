@@ -8,7 +8,7 @@ if(noLoggedInUser) {
 
 $(document).ready(function() {
     var logout = $('#logout');
-    var username = localStorage.getItem('name');
+    var username = localStorage.getItem('username');
 
     function showWelcomingMessage() {
         console.log('Welcome ', username);

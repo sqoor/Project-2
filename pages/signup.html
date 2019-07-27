@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +8,6 @@
     <meta name="author" content="Abdullah Alsqoor">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel=stylesheet href="../css/signup.css">
-    <link rel="icon" href="../images/icon.png">
     <title>Sign Up</title>
 
     <!-- bootstrap scripts -->
@@ -21,10 +20,63 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel=stylesheet href="../css/signup.css">
+
+     <!-- fontawesome icons -->
+     <script src="https://kit.fontawesome.com/6aa632ba37.js"></script>
+
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+     <!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> -->
+ 
+     <!-- animate -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+ 
+     <!-- signup page script -->
+     <script src="../js/signup.js"></script>
+
 </head>
 <body>
-    <div>
-        <h1>Sign Up Page</h1>
+    <div class="wrapper p-5">
+        <h2 class="mb-5 rounded-pill text-center">Sign Up Page</h2>
+        <div class="social-btn text-center">
+            <a href="#" class="btn btn-primary btn-lg rounded-pill"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="btn btn-info btn-lg rounded-pill"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="btn btn-danger btn-lg rounded-pill"><i class="fab fa-google"></i> Google</a>
+        </div>
+        <div class="or-seperator">
+            <b>or</b>
+        </div>
+        <form class="form">
+            <!-- Error message (alert) -->
+            <div id="error-message" class="alert alert-danger fade" role="alert">
+                <strong>Holy guacamole!</strong> Original text.
+            </div>
+            <!-- end alert -->
+
+            <div class="form-group">
+                <label for="username"><i class="fas fa-user"></i> Username</label>
+                <input id="username" name="username" type="text" class="form-control rounded-pill" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input id="email" name="email" type="email" class="form-control rounded-pill" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="password"> <i class="fas fa-lock"></i> Password</label> <span id="pass-error" class="pass-error-style"></span>
+                <input id="password" name="password" type="password" class="form-control rounded-pill" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm"> <i class="fas fa-lock"></i> Confirm</label> <span id="confirm-error" class="pass-error-style"></span>
+                <input id="confirm" name="confirm" type="password" class="form-control rounded-pill" placeholder="Confirm Password">
+            </div>
+            <button id="submitBtn" type="submit" class="btn btn-danger rounded-pill mt-4 w-100">Sign Up</button>
+
+            <a href="../pages/login.html" id="passwordHelp" class="form-text text-danger">Already a user?</a>
+        </form>
     </div>
 </body>
 </html>

@@ -1,11 +1,14 @@
-body {
-    display: flex; /* establish flex container */
-    justify-content: center; /* center flex items horizontally, in this case */
-    align-items: center; /* center flex items vertically, in this case */
-
+/* body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     background-image: url('https://images.pexels.com/photos/2663247/pexels-photo-2663247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-transform: scale(0.69);
+    -moz-transform: scale(0.69);
+    transform: scale(0.69);
+    height: 100%;
 }
 
 h1 {
@@ -13,4 +16,6 @@ h1 {
     background-color: rgba(52, 58, 64, .7);
     padding: 40px;
     border-radius: 50%;
-}
+} */
+
+
