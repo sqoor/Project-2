@@ -8,7 +8,7 @@
         <meta name="author" content="Abdullah Alsqoor">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel=stylesheet href="../css/style.css">
+        <!-- <link rel=stylesheet href="../css/style.css"> -->
         <link rel="stylesheet" href="../css/userpage.css">
 
         <link rel="icon" href="../images/icon.png">
@@ -26,8 +26,19 @@
         <!-- my scripts -->
         <script src="../js/userpage.js"></script>
 
+         <!-- fontawesome icons -->
+        <script src="https://kit.fontawesome.com/6aa632ba37.js"></script>
+
+
         <!-- animate -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    
+
+        <!-- tostar -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-2">
@@ -43,18 +54,40 @@
                 </form>
             </div>
         </nav>
-        <section class="welcome">
-            <div class="alert" role="alert">
-                <span class="heart">&#10084</span>
-            </div>
-        </section>
+        
 
 
         <section id="cards">
+            <!-- write your code here, make to do list app here  -->
+            <section id="newItems" class="mt-3">
+                <div class="d-flex align-items-center">
+                    <input id="input" class="form-control rounded-pill d-inline mr-1" name="newItem" type="text" placeholder="Insert a task">
+                    <i id="addBtn" class="fas fa-plus-circle fa-2x"></i>
+                </div>
+            </section>
 
+            <article id="lists" class="lists">
+                <ul id="to-do-list" class="mt-2">
+                    <h3 class="text-center mb-4">To-do List <span class="badge badge-success  ml-2 rounded-circle">0</span></h3>
+                </ul>
+                <ul id="in-progress-list" class="mt-2">
+                    <h3 class="text-center mb-4">In-progress List <span class="badge badge-warning  ml-2 rounded-circle">0</span></h3>
+                </ul>
+                <ul id="completed-list" class="mt-2">
+                    <h3 class="text-center mb-4">Completed List <span class="badge badge-primary  ml-2 rounded-circle">0</span></h3>
+                </ul>
+            </article>
+
+            <!-- end -->
         </section>
-        <footer class="font-small fixed-bottom bg-dark text-center py-2">
+
+        <!-- <section class="welcome">
+            <div class="alert" role="alert">
+                <span class="heart">&#10084</span>
+            </div>
+        </section> -->
+        <!-- <footer class="font-small fixed-bottom bg-dark text-center py-2">
             © 2019 Copyright: Orange Academy By Orange
-        </footer>
+        </footer> -->
     </body>
 </html>
