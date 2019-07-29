@@ -19,7 +19,7 @@ $(document).ready(function() {
             "debug": false,
             "newestOnTop": false,
             "progressBar": false,
-            "positionClass": "toast-top-right",
+            "positionClass": "toast-top-center",
             "preventDuplicates": true,
             "onclick": null,
             "showDuration": "300",
@@ -33,6 +33,8 @@ $(document).ready(function() {
           }
 
         toastr["success"]("Welcome " + username);
+
+        localStorage.setItem('showed-welcoming-message', true);
     }
 
     
@@ -53,12 +55,15 @@ $(document).ready(function() {
         toListBtn.classList = cssClasses;
         toListBtn.addEventListener('click', function(e) {
             var item = e.target.parentElement;
+            var siplings = e.path[1].children;
             
             $(item).appendTo(parent);
-            $('.to-do-btn').show();
-            $('.to-progress-btn').show();
-            $('.to-completed-btn').show();
-            $(this).hide();
+
+            for(var sipling of siplings) {
+                $(sipling).show()
+            }
+
+            $(e.target).hide();
         });
 
         return toListBtn;
@@ -93,7 +98,7 @@ $(document).ready(function() {
     }
 
 
-    // if(localStorage.getItem('showed-welcome-message'))
+    if(localStorage.getItem('showed-welcoming-message') === null)
         showWelcomingMessage();
 
     $('.username').html(username);
