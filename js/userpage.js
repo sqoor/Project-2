@@ -47,14 +47,40 @@ $(document).ready(function() {
         return deleteBtn;
     }
 
+    function createToListBtn(cssClasses, parent) {
+        var toListBtn = document.createElement('i');
+
+        toListBtn.classList = cssClasses;
+        toListBtn.addEventListener('click', function(e) {
+            var item = e.target.parentElement;
+            
+            $(item).appendTo(parent);
+            $('.to-do-btn').show();
+            $('.to-progress-btn').show();
+            $('.to-completed-btn').show();
+            $(this).hide();
+        });
+
+        return toListBtn;
+    }
+
+
     function addNewItem() {
         var toDoList = document.getElementById('to-do-list');
         var newItem = document.createElement('li');
         var deleteBtn = createDeleteBtn();
+        var toDoBtn = createToListBtn('to-do-btn fas fa-plus-circle', '#to-do-list');
+        var toProgressBtn = createToListBtn('to-progress-btn fas fa-plus-circle', '#in-progress-list');
+        var toCompletedBtn = createToListBtn('to-completed-btn fas fa-plus-circle', '#completed-list');
 
         newItem.append(newItemInput.val());
         newItem.appendChild(deleteBtn);
+        newItem.appendChild(toCompletedBtn);
+        newItem.appendChild(toProgressBtn);
+        newItem.appendChild(toDoBtn);
         toDoList.appendChild(newItem);
+
+        $('.to-do-btn').hide();
     }
 
     function showItemsNumberOnBadge(list) {
@@ -67,8 +93,8 @@ $(document).ready(function() {
     }
 
 
-
-    showWelcomingMessage();
+    // if(localStorage.getItem('showed-welcome-message'))
+        showWelcomingMessage();
 
     $('.username').html(username);
 
