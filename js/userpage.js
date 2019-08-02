@@ -1,7 +1,7 @@
 var noLoggedInUser = localStorage.length < 1;
 
 if(noLoggedInUser) {
-    window.location.href = '/';
+    window.location.href = '/index.html';
 }
 
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
     logout.on('click', function() {
         localStorage.clear();
-        window.location.href = '/';
+        window.location.href = '../index.html';
     });
 
     addBtn.on('click', function(e) {
